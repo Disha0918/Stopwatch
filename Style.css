@@ -1,0 +1,150 @@
+/*Default styling: setting margin, padding */
+*,
+*:before,
+*:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the body */
+body{
+    
+    font-family: sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 100vh;  
+    background: url('image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;   
+}
+
+/* Styling the container */
+.container{
+    background-color: black;
+    width: 50%;
+    min-width: 500px;
+    height: 50%;
+    position: absolute;
+    display: flex;
+    transform: translate(-50%, -50%);
+    top: 60%;
+    left: 50%;
+    padding: 60px 0;
+    border-radius: 10px;
+}
+
+/* Styling the Outer circle */
+.outer_cirle{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: #00808069; 
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+    left: 25%;
+    top: -90%;
+    
+}
+
+/* Styling the Stopwatch timer */
+.timer{
+    width: 365px;
+    height: 365px;
+    border-radius: 60%;
+    background: linear-gradient(135deg, #0437f2, #40e0d0);
+    font: bold;
+    font-family: 'Roboto mono',monospace;
+    color: black;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    top: -125%;
+    left: 25%;
+
+}
+
+/* Display button */
+.buttons{
+    width: 400px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: space-between;
+    top: 70%;
+    left: 25%;
+}
+
+/* Styling each button */
+button{
+    width: 60px;
+    height: 60px; 
+    position: relative;
+    padding: 1% 1%;
+    border-radius: 50%;
+    border: 8px solid #008080b8;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+/* Setting different background color to each button */
+#start {
+    background-color: #0FFF50;
+}
+#stop {
+    background-color: red;
+}
+#reset {
+    background-color: #F5F516
+}
+
+/* Setting hover effect to each of the button */
+#start:hover {
+    background-color:#00c234 ;
+}
+
+#stop:hover {
+    background-color:#880808 ;
+}
+
+#reset:hover {
+    background-color:#F5BD16 ;
+}
+
+
+/* Media queries for responsiveness */
+/* Media query for container having max-width: 600px */
+@media screen and (max-width: 600px) {
+    .container {
+      width: 90%; 
+      height:50%;
+      min-width: unset;
+    }
+}
+
+/* Media query having max-width: 600px for circular timer and button  */
+@media screen and (max-width: 1250px) { 
+    .outer_cirle {
+        width: 80%;
+        min-width: unset;
+        left: 10%;
+        right: 10%;
+    }
+    .timer {
+        width: 90%;
+        min-width: unset;
+        font-size: 47px;
+    }
+    .buttons {
+        width: 90%; 
+        left: 5%; 
+        font-size: 10px;
+    }
+}
+
+
