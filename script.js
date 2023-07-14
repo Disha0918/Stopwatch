@@ -7,7 +7,7 @@ let time_stamp = document.querySelector('.timer');
 //Initializing a variable to keep track of the timer
 let count = null;
 
-// Attaching an even listener for Id 'Start'
+// Attaching an event listener for Id 'Start'
 document.getElementById('start').addEventListener('click', () => {
   if (count !== null) {
     clearInterval(count);
@@ -15,12 +15,12 @@ document.getElementById('start').addEventListener('click', () => {
   count = setInterval(watch, 10);
 });
 
-// Attaching an even listener for Id 'Stop'
+// Attaching an event listener for Id 'Stop'
 document.getElementById('stop').addEventListener('click', () => {
   clearInterval(count);
 });
 
-// Attaching an even listener for Id 'Reset'
+// Attaching an event listener for Id 'Reset'
 document.getElementById('reset').addEventListener('click', () => {
   clearInterval(count);
   [mil_sec, sec, min, hr] = [0, 0, 0, 0];
